@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2'
+
 import { data, Link } from "react-router-dom";
 
 const AddCoffee = () => {
@@ -28,6 +30,14 @@ const AddCoffee = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
+      if(data.insertedId){
+        Swal.fire({
+          title: 'success!',
+          text: 'User Added Successfully',
+          icon: 'success',
+          confirmButtonText: 'Cool'
+        })
+      }
     })
      
   }
