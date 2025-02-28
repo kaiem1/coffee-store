@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div>
+      <div className="flex justify-between">
       <div className="flex gap-4">
         <div>
           <Link to={"/addCoffee"}>
@@ -21,6 +22,21 @@ function App() {
           </Link>
         </div>
         
+      </div>
+
+      <div className="flex gap-4">
+        <div>
+          <Link to={"/signup"}>
+            <button className="btn btn-warning ">Sign Up</button>
+          </Link>
+        </div>
+        <div>
+          <Link to={"/signin"}>
+            <button className="btn btn-warning">Sign In</button>
+          </Link>
+        </div>
+        
+      </div>
       </div>
       <div className='m-20'>
       <h1 className="text-6xl text-purple-400 pb-24 text-center border">
